@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+
+    <style>
+        body {
+            background-color: rgb(170, 170, 170);
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+        }
+
+        .container p {
+            font-size: 14pt;
+            font-weight: bold;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container input {
+            border-radius: 5px;
+            height: 30px;
+            border: none;
+            font-size: 14pt;
+            margin-bottom: 20px;
+        }
+
+        .container button {
+            padding: 10px;
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #result {
+            color: #000;
+            font-size: 14pt;
+            font-weight: bold;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <p>Quantos dólares deseja converter?</p>
+        <input type="text" name="value" id="value">
+        <div id="result"></div>
+        <button onclick="convert()">Converter</button>
+    </div>
+    
+    <script>
+
+        function convert() {
+            
+            const value = document.getElementById("value").value;
+
+            const result = document.getElementById("result");
+
+            const calc =  value * 5.24
+
+            result.innerHTML = calc.toFixed(2) + " Dolar"
+
+        }
+
+    </script>
+
+</body>
+</html>
